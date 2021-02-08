@@ -39,7 +39,7 @@
 <div class="form-group">
 <label class="col-sm-3 control-label">Main IMAGE</label>
 <div class="col-sm-2"><input name="mainimage" type="file" /></div>
-<div class="col-sm-4"><b style="color:red; font-weight: bold; margin-left:40px;"> ONE IMAGE ONLY |  Will Resized to 800 X 400 </b></div>
+<div class="col-sm-4"><b style="color:red; font-weight: bold;"> ONE IMAGE ONLY |  Will Resized to 800 X 400 </b></div>
 </div>
 
 <br><br>

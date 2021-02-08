@@ -92,7 +92,7 @@
 <div class="form-group">
 <label class="col-sm-3 control-label">Main IMAGE</label>
 <div class="col-sm-2"><input name="mainimage" type="file" /></div>
-<div class="col-sm-4"><img src="{{asset('tourimages/')}}/{{ $tour->img }}" alt="*" style="width:200px;margin-left: 70px;"></div>
+<div class="col-sm-4"><img src="{{asset('tourimages/')}}/{{ $tour->img }}" alt="*" style="width:200px;"></div>
 
 </div>
 

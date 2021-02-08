@@ -42,7 +42,7 @@ class AdminController extends Controller
     public function dashboard(){
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Панель администратора';
+        $data['page_title'] = 'DashBoard';
         $data['num_cat'] = Cats::query()->count();
         $data['num_tour'] = Tour::query()->count();
         $data['num_order'] = Orders::query()->count();
@@ -88,17 +88,17 @@ if (Hash::check($request->currentpassword, Auth::guard('admin')->user()->passwor
 
                 $admin->fill($input)->save(); //////////// UPDATE
 
-                Session::flash('Сообщение','Пароль успешно изменен');        
+                Session::flash('message','Password Changed Successfully');        
                 Session::flash('type', 'success');  
                 return redirect()->back();
                 }else{
-                Session::flash('Сообщение','Новый пароль не совпадает с подтверждением пароля');  
+                Session::flash('message','New Password does not match with Comfirm Password');  
                 Session::flash('type', 'danger');
                 return redirect()->back();
                 }
 
 }else{
-Session::flash('Сообщение','Текущий пароль неверен');  
+Session::flash('message','Current Password is incorrect');  
 Session::flash('type', 'danger');
 return redirect()->back();
 }
@@ -139,17 +139,17 @@ if ($cat['id']==0) {
 
                 try {
                 Cats::create($cat);
-                session()->flash('Сообщение', 'Добавлено успешно.');
+                session()->flash('message', 'Added Successfully.');
                 Session::flash('type', 'success');
                 return redirect()->back();
                 } catch (\PDOException $e) {
-                session()->flash('Сообщение', 'Возникла проблема, попробуйте еще раз!');
+                session()->flash('message', 'Some Problem Occure, Please Try Again!');
                 Session::flash('type', 'danger');
                 return redirect()->back();
                 }
 
         }else{
-            Session::flash('Сообщение', "Имя уже существует !!!");
+            Session::flash('message', "Name  Already Exist !!!");
             Session::flash('type', 'danger');
             return redirect()->back();
         }
@@ -162,12 +162,12 @@ if ($exist === null) {
 
             $input = $request->all();
             $catdetails->fill($input)->save();
-            Session::flash('Сообщение', "Успешно Обновлено !!!");
+            Session::flash('message', "Updated Successfully !!!");
             Session::flash('type', 'success');
             return redirect()->back();
 
 }else{
-            Session::flash('Сообщение', "Имя уже существует !!!");
+            Session::flash('message', "Name  Already Exist !!!");
             Session::flash('type', 'danger');
             return redirect()->back();
 }
@@ -201,14 +201,14 @@ if ($exist === null) {
   public function catDelete(Request $request)
     {
         if ($request->input('id') === '') {
-            session()->flash('Сообщение', 'Ой, неверный запрос!');
+            session()->flash('message', 'Oops, bad request!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }else{
 
             $cat = Cats::findOrFail($request->input('id'));
             $cat->delete();
-            session()->flash('Сообщение', 'Удалено успешно.');
+            session()->flash('message', 'Deleted Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
         }
@@ -229,7 +229,7 @@ if ($exist === null) {
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Добавить новый тур';
+        $data['page_title'] = 'Add New Tour';
         $data['cat'] = Cats::query()->get();
         $data['general'] = GeneralSetting::first();
        return view('admin.addtour', $data);
@@ -272,12 +272,12 @@ if ($exist === null) {
 
         try {
             Tour::create($Tour);
-            session::flash('Сообщение', 'Добавлено успешно.');
+            session::flash('message', 'Added Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
 
         } catch (\PDOException $e) {
-            session::flash('Сообщение', 'Some Problem Occure, Please Try Again!');
+            session::flash('message', 'Some Problem Occure, Please Try Again!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }
@@ -308,7 +308,7 @@ if ($exist === null) {
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Изменить свойство';
+        $data['page_title'] = 'Edit Property';
         $data['cat'] = Cats::query()->get();
         $data['general'] = GeneralSetting::first();
         $data['tour'] = $tour;
@@ -362,7 +362,7 @@ if ($exist === null) {
 
             $pro->fill($Tour)->save();
 
-            Session::flash('Сообщение', "Успешно Обновлено !!!");
+            Session::flash('message', "Updated Successfully !!!");
             Session::flash('type', 'success');
             return redirect()->back();
 
@@ -376,14 +376,14 @@ if ($exist === null) {
   public function TourDelete(Request $request)
     {
         if ($request->input('id') === '') {
-            session()->flash('Сообщение', 'Ой, неверный запрос!');
+            session()->flash('message', 'Oops, bad request!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }else{
 
             $property = Tour::findOrFail($request->input('id'));
             $property->delete();
-            session()->flash('Сообщение', 'Удалено успешно.');
+            session()->flash('message', 'Deleted Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
         }
@@ -399,7 +399,7 @@ if ($exist === null) {
   public function TourFeatured(Request $request)
     {
         if ($request->input('id') === '') {
-            session()->flash('Сообщение', 'Ой, неверный запрос!');
+            session()->flash('message', 'Oops, bad request!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }else{
@@ -408,7 +408,7 @@ if ($exist === null) {
         $prop->featured = !$prop->featured;
         $prop->save();
 
-            session()->flash('Сообщение', 'Успешно Обновлено.');
+            session()->flash('message', 'Updated Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
         }
@@ -461,7 +461,7 @@ if ($exist === null) {
 
             $input = Input::except('_method', '_token');
             $catdetails->fill($input)->save();
-            Session::flash('Сообщение', "Успешно Обновлено !!!");
+            Session::flash('message', "Updated Successfully !!!");
             Session::flash('type', 'success');
             return redirect()->back();
 
@@ -481,7 +481,7 @@ if ($exist === null) {
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Настройка логотипа';
+        $data['page_title'] = 'Logo Setting';
         return view('admin.setlogo', $data);
 
    }
@@ -506,13 +506,13 @@ if ($exist === null) {
             $request->file('image')->move($destinationPath, $fileName);
 
 
-        Session::flash('Сообщение', "Успешно Обновлено !!!");
+        Session::flash('message', "Updated Successfully !!!");
         Session::flash('type', 'success');
         return redirect()->back();
 }
 
 }else{
-            Session::flash('Сообщение', "Пожалуйста, выберите файл для загрузки !!!");
+            Session::flash('message', "Please Select File To Upload !!!");
             Session::flash('type', 'danger');
             return redirect()->back();
 
@@ -528,7 +528,7 @@ if ($exist === null) {
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Настройка логотипа нижнего колонтитула';
+        $data['page_title'] = 'Footer Logo Setting';
         return view('admin.setlogof', $data);
 
    }
@@ -553,13 +553,13 @@ if ($exist === null) {
             $request->file('image')->move($destinationPath, $fileName);
 
 
-        Session::flash('Сообщение', "Успешно Обновлено !!!");
+        Session::flash('message', "Updated Successfully !!!");
         Session::flash('type', 'success');
         return redirect()->back();
 }
 
 }else{
-            Session::flash('Сообщение', "Пожалуйста, выберите файл для загрузки !!!");
+            Session::flash('message', "Please Select File To Upload !!!");
             Session::flash('type', 'danger');
             return redirect()->back();
 
@@ -574,7 +574,7 @@ if ($exist === null) {
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Настройка слайдера';
+        $data['page_title'] = 'Slider Setting';
         $data['sliders'] = Slider::orderby('id', 'ASC')->get();
         return view('admin.setslider', $data);
    }
@@ -612,12 +612,12 @@ if ($exist === null) {
 
         try {
             Slider::create($slider);
-            session::flash('Сообщение', 'Добавлено успешно.');
+            session::flash('message', 'Added Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
 
         } catch (\PDOException $e) {
-            session::flash('Сообщение', 'Возникла проблема, попробуйте еще раз!');
+            session::flash('message', 'Some Problem Occure, Please Try Again!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }
@@ -634,14 +634,14 @@ if ($exist === null) {
   public function SliderDelete(Request $request)
     {
         if ($request->input('id') === '') {
-            session()->flash('Сообщение', 'Ой, неверный запрос!');
+            session()->flash('message', 'Oops, bad request!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }else{
 
             $property = Slider::findOrFail($request->input('id'));
             $property->delete();
-            session()->flash('Сообщение', 'Удалено успешно.');
+            session()->flash('message', 'Deleted Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
         }
@@ -683,7 +683,7 @@ if ($exist === null) {
             $img->resize(1920, 320);
             $img->save($destinationPath.$fileName);
 
-        Session::flash('Сообщение', "Успешно Обновлено !!!");
+        Session::flash('message', "Updated Successfully !!!");
         Session::flash('type', 'success');
         return redirect()->back();
 }
@@ -743,7 +743,7 @@ $img->save($destinationPath.$filename);
     }
     if($uploadcount == $file_count){
 
-        session::flash('Сообщение', "$uploadcount Изображения загружены успешно!");
+        session::flash('message', "$uploadcount Images Uploaded Successfully!");
         Session::flash('type', 'success');
         return redirect()->back();
 
@@ -762,14 +762,14 @@ $img->save($destinationPath.$filename);
   public function partnerDelete(Request $request)
     {
         if ($request->input('id') === '') {
-            session()->flash('Сообщение', 'Ой, неверный запрос!');
+            session()->flash('message', 'Oops, bad request!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }else{
 
             $pp = Partner::findOrFail($request->input('id'));
             $pp->delete();
-            session()->flash('Сообщение', 'Удалено успешно.');
+            session()->flash('message', 'Deleted Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
         }
@@ -801,7 +801,7 @@ $img->save($destinationPath.$filename);
 
             $input = Input::except('_method', '_token');
             $soc->fill($input)->save();
-            Session::flash('Сообщение', "Успешно Обновлено !!!");
+            Session::flash('message', "Updated Successfully !!!");
             Session::flash('type', 'success');
             return redirect()->back();
 
@@ -838,12 +838,12 @@ $img->save($destinationPath.$filename);
       $soc->txt = $request['txt'];
       $soc->about = $request['about'];
       $soc->save();
-            Session::flash('Сообщение', "Успешно Обновлено !!!");
+            Session::flash('message', "Updated Successfully !!!");
             Session::flash('type', 'success');
             return redirect()->back();
  }else{
 
-            Session::flash('Сообщение', "ОШИБКА, попробуйте еще раз !!!");
+            Session::flash('message', "ERROR, Please Try Again !!!");
             Session::flash('type', 'danger');
             return redirect()->back();
  }
@@ -862,7 +862,7 @@ $img->save($destinationPath.$filename);
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Настройка меню нижнего колонтитула';
+        $data['page_title'] = 'Footer Menu Setting';
         $data['info'] = FootHead::where('id', '=', '1')->first();
         $data['menulist'] = FooterMenu::orderBy('id', 'ASC')->paginate(0);
         return view('admin.setfooter', $data);
@@ -878,7 +878,7 @@ $img->save($destinationPath.$filename);
 
             $input = Input::except('_method', '_token');
             $foterhead->fill($input)->save();
-            Session::flash('Сообщение', "Имя заголовка обновлено успешно !!!");
+            Session::flash('message', "Header Name Updated Successfully !!!");
             Session::flash('type', 'success');
             return redirect()->back();
 
@@ -909,12 +909,12 @@ $img->save($destinationPath.$filename);
 
         try {
             FooterMenu::create($fmenu);
-            session::flash('Сообщение', 'Добавлено успешно.');
+            session::flash('message', 'Added Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
 
         } catch (\PDOException $e) {
-            session::flash('Сообщение', 'Возникла проблема, попробуйте еще раз!');
+            session::flash('message', 'Some Problem Occure, Please Try Again!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }
@@ -929,14 +929,14 @@ $img->save($destinationPath.$filename);
   public function deletefootmenu(Request $request)
     {
         if ($request->input('id') === '') {
-            session()->flash('Сообщение', 'Ой, неверный запрос!');
+            session()->flash('message', 'Oops, bad request!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }else{
 
             $fmenu = FooterMenu::findOrFail($request->input('id'));
             $fmenu->delete();
-            session()->flash('Сообщение', 'Удалено успешно.');
+            session()->flash('message', 'Deleted Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
         }
@@ -952,7 +952,7 @@ $img->save($destinationPath.$filename);
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Изменить меню нижнего колонтитула';
+        $data['page_title'] = 'Edit Footer Menu';
         $data['details'] = $footmenu;
         return view('admin.footermenuedit', $data);
 
@@ -968,7 +968,7 @@ $img->save($destinationPath.$filename);
 
             $input = $request->all();
             $footmenu->fill($input)->save();
-            Session::flash('Сообщение', "Успешно Обновлено !!!");
+            Session::flash('message', "Updated Successfully !!!");
             Session::flash('type', 'success');
             return redirect()->back();
 
@@ -989,7 +989,7 @@ $img->save($destinationPath.$filename);
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Добавить новый альбом';
+        $data['page_title'] = 'Add New Album';
        return view('admin.addalbum', $data);
 
    }
@@ -1022,12 +1022,12 @@ $img->save($destinationPath.$filename);
 
         try {
             Album::create($Album);
-            session::flash('Сообщение', 'Добавлено успешно.');
+            session::flash('message', 'Added Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
 
         } catch (\PDOException $e) {
-            session::flash('Сообщение', 'Возникла проблема, попробуйте еще раз!');
+            session::flash('message', 'Some Problem Occure, Please Try Again!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }
@@ -1101,7 +1101,7 @@ unlink('frontend/images/albums/'.$pro['img']);
 
             $pro->fill($Tour)->save();
 
-            Session::flash('Сообщение', "Успешно Обновлено !!!");
+            Session::flash('message', "Updated Successfully !!!");
             Session::flash('type', 'success');
             return redirect()->back();
 
@@ -1115,7 +1115,7 @@ unlink('frontend/images/albums/'.$pro['img']);
   public function deleteAlbum(Request $request)
     {
         if ($request->input('id') === '') {
-            session()->flash('Сообщение', 'Ой, неверный запрос!');
+            session()->flash('message', 'Oops, bad request!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }else{
@@ -1125,7 +1125,7 @@ unlink('frontend/images/albums/'.$pro['img']);
 
 unlink('frontend/images/albums/'.$alb['img']);
 
-            session()->flash('Сообщение', 'Удалено успешно.');
+            session()->flash('message', 'Deleted Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
         }
@@ -1138,7 +1138,7 @@ unlink('frontend/images/albums/'.$alb['img']);
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Просмотр изображений альбома';
+        $data['page_title'] = 'View Album Images';
         $data['imgs'] = Albumimgs::where('parent', $id)->paginate(1000);
         return view('admin.viewalbum', $data);
 
@@ -1173,12 +1173,12 @@ unlink('frontend/images/albums/'.$alb['img']);
 
         try {
             Albumimgs::create($Album);
-            session::flash('Сообщение', 'Добавлено успешно.');
+            session::flash('message', 'Added Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
 
         } catch (\PDOException $e) {
-            session::flash('Сообщение', 'Возникла проблема, попробуйте еще раз!');
+            session::flash('message', 'Some Problem Occure, Please Try Again!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }
@@ -1196,7 +1196,7 @@ unlink('frontend/images/albums/'.$alb['img']);
   public function deleteAlbumImg(Request $request)
     {
         if ($request->input('id') === '') {
-            session()->flash('Сообщение', 'Ой, неверный запрос!');
+            session()->flash('message', 'Oops, bad request!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }else{
@@ -1206,7 +1206,7 @@ unlink('frontend/images/albums/'.$alb['img']);
 
 unlink('frontend/images/albumdetails/'.$alb['img']);
 
-            session()->flash('Сообщение', 'Удалено успешно.');
+            session()->flash('message', 'Deleted Successfully.');
             Session::flash('type', 'success');
             return redirect()->back();
         }
@@ -1219,7 +1219,7 @@ unlink('frontend/images/albumdetails/'.$alb['img']);
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Список заказов';
+        $data['page_title'] = 'Order List';
         $data['orders'] = Orders::orderBy('id', 'ASC')->paginate(1000);
         return view('admin.listorder', $data);
 
@@ -1236,7 +1236,7 @@ $input = [
 
 $ord->fill($input)->save(); //////////// UPDATE
 
-    session()->flash('Сообщение', 'Успешно Обновлено.');
+    session()->flash('message', 'Updated Successfully.');
     Session::flash('type', 'success');
 }
 
@@ -1268,7 +1268,7 @@ $ord->fill($input)->save(); //////////// UPDATE
     public function logout()
     {
         Auth::guard('admin')->logout();
-       session()->flash('Сообщение', 'Вы только что вышли из системы!');
+       session()->flash('message', 'Just Logged Out!');
         return redirect('/admin');
     }
 

@@ -47,7 +47,7 @@
 <!-- BEGIN LOGO -->
 <div class="page-logo">
 <a href="home.php">
-<img src="{{asset('frontend/images/logo.png')}}" class="logo-default" alt="-" style="filter: brightness(0) invert(1); width: 88px;margin-top: -11px;"/> 
+<img src="{{asset('frontend/images/logo.png')}}" class="logo-default" alt="-" style="filter: brightness(0) invert(1); width: 90px;margin-top: -13px;"/> 
 
 </a>
 <div class="menu-toggler sidebar-toggler"> </div>
@@ -109,14 +109,14 @@
                         
 <li class="nav-item start">
 	<a href="{{url('admin/dashboard')}}" class="nav-link ">
-		<i class="icon-home"></i><span class="title">Панель администратора</span>
+		<i class="icon-home"></i><span class="title">Dashboard</span>
 	</a>
 </li>
 								
                        
 <li class="nav-item">
 	<a href="{{url('admin/category')}}" class="nav-link ">
-		<i class="fa fa-bars"></i><span class="title">Категории</span>
+		<i class="fa fa-bars"></i><span class="title">Category</span>
 	</a>
 </li>
 								
@@ -137,11 +137,11 @@
 
 <li class="nav-item">
 <a href="javascript:;" class="nav-link nav-toggle"><i class="fa fa-plane"></i>
-<span class="title"> Тур</span><span class="arrow"></span></a>
+<span class="title"> Tour</span><span class="arrow"></span></a>
                             
 <ul class="sub-menu">
-<li class="nav-item"><a href="{{url('admin/Tour/add')}}" class="nav-link"><i class="fa fa-plus"></i> Добавить  </a></li>
-<li class="nav-item"><a href="{{url('admin/Tour')}}" class="nav-link"><i class="fa fa-desktop"></i> Посмотреть</a></li>
+<li class="nav-item"><a href="{{url('admin/Tour/add')}}" class="nav-link"><i class="fa fa-plus"></i> ADD  </a></li>
+<li class="nav-item"><a href="{{url('admin/Tour')}}" class="nav-link"><i class="fa fa-desktop"></i> View</a></li>
         
 </ul>
 </li>    
@@ -155,7 +155,7 @@
 
 <li class="nav-item">
 <a href="javascript:;" class="nav-link nav-toggle"><i class="fa fa-file-image-o"></i>
-<span class="title">Туристический альбом</span><span class="arrow"></span></a>
+<span class="title">TOUR ALBUM</span><span class="arrow"></span></a>
                             
 <ul class="sub-menu">
 
@@ -180,7 +180,7 @@
  
 <li class="nav-item">
 	<a href="{{url('admin/orders')}}" class="nav-link ">
-		<i class="fa fa-shopping-cart"></i><span class="title">Заказы</span>
+		<i class="fa fa-shopping-cart"></i><span class="title">ORDERS</span>
 	</a>
 </li>
 					
@@ -192,38 +192,38 @@
 
 <li class="nav-item">
 <a href="javascript:;" class="nav-link nav-toggle"><i class="fa fa-cogs"></i>
-<span class="title">Настройка веб-сайта</span><span class="arrow"></span></a>
+<span class="title">Website Setting</span><span class="arrow"></span></a>
 <ul class="sub-menu">
 
 
 
 
 <li class="nav-item">
-<a href="{{url('admin/generalsetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Общие настройки </a>
+<a href="{{url('admin/generalsetting')}}" class="nav-link"><i class="fa fa-cogs"></i> General Setting </a>
 </li>
 
 
 
-<li class="nav-item"><a href="{{url('admin/homesetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Настройка домашней страницы </a></li>
+<li class="nav-item"><a href="{{url('admin/homesetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Home Page Setting </a></li>
 
 
 
 <li class="nav-item">
-<a href="{{url('admin/logosetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Настройка логотипа </a>
+<a href="{{url('admin/logosetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Logo Setting </a>
 </li>
 
 
 <li class="nav-item">
-<a href="{{url('admin/slidersetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Настройка стартового слайдера </a>
+<a href="{{url('admin/slidersetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Home Slider Setting </a>
 </li>
 
 
 <li class="nav-item">
-<a href="{{url('admin/partnerlogosetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Логотип партнеров </a>
+<a href="{{url('admin/partnerlogosetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Partners Logo </a>
 </li>
 
 <li class="nav-item">
-<a href="{{url('admin/socialsetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Социальные сети </a>
+<a href="{{url('admin/socialsetting')}}" class="nav-link"><i class="fa fa-cogs"></i> Social Links </a>
 </li>
 
 </ul>
@@ -301,7 +301,7 @@
 
 <!-- BEGIN FOOTER -->
 <div class="page-footer">
-<div class="page-footer-inner"> 2021 &copy; TheSoftKing.</div>
+<div class="page-footer-inner"> 2016 &copy; TheSoftKing.</div>
 <div class="scroll-to-top">
 <i class="icon-arrow-up"></i>
 </div>

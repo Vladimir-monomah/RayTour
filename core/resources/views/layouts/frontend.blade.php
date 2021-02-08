@@ -191,7 +191,7 @@
               </ul>
           </div>
 
-           <center><div class="col-md-6"><p>© Copyright 2021 Все права защищены. {{$General->sitename}} </p></div><center>
+           <center><div class="col-md-6"><p>© Copyright 2016  All Rights Reserved by {{$General->sitename}} </p></div><center>
 
         </div>
       </div>

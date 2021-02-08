@@ -18,7 +18,7 @@
 </div>
 <div class="details">
 <div class="number">{{ $num_tour }} </div>
-<div class="desc">Количество туров </div>
+<div class="desc">TOTAL TOUR </div>
 </div>
 </div>
 </div>
@@ -34,7 +34,7 @@
 </div>
 <div class="details">
 <div class="number">{{ $num_cat }}</div>
-<div class="desc">Количество стран</div>
+<div class="desc"> Cats</div>
 </div>
 </div>
 </div>
@@ -51,7 +51,7 @@
 </div>
 <div class="details">
 <div class="number">{{ $num_order }}</div>
-<div class="desc">Заказы</div>
+<div class="desc">Orders </div>
 </div>
 </div>
 </div>

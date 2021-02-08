@@ -84,7 +84,7 @@
 
                   <div class="row">
                   <div class="col-md-offset-3 col-md-6">
-                  <button type="submit" class="btn blue btn-block">Сохранить</button>
+                  <button type="submit" class="btn blue btn-block">Submit</button>
                   </div>
                   </div>
 

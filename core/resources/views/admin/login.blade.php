@@ -30,17 +30,17 @@
 <div class="menu-toggler sidebar-toggler"></div>
 <!-- BEGIN LOGO -->
 <div class="logo">
-<a href="#"><img src="{{asset('frontend/images/logo.png')}}" alt="-" style="filter: brightness(0) invert(1);"/> </a>
+<a href="#"><img src="{{asset('frontend/images/logo.png')}}" alt="-" style="filter: brightness(0) invert(1);" width="200px"/> </a>
 </div>
 <!-- END LOGO -->
 
 <div class="content">
 <form class="login-form" action="" method="post">
-<h3 class="form-title font-green">Войти в систему</h3>
+<h3 class="form-title font-green">Sign In</h3>
 
 <div class="alert alert-danger display-hide">
 <button class="close" data-close="alert"></button>
-<span> Введите имя пользователя и пароль. </span>
+<span> Enter any username and password. </span>
 </div>
 
 
@@ -54,14 +54,14 @@
 
 <div class="form-group">
 <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
-<label class="control-label visible-ie8 visible-ie9">Имя пользователя</label>
+<label class="control-label visible-ie8 visible-ie9">Username</label>
 <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off" placeholder="Username" name="username" /> </div>
 <div class="form-group">
-<label class="control-label visible-ie8 visible-ie9">Пароль</label>
+<label class="control-label visible-ie8 visible-ie9">Password</label>
 <input class="form-control form-control-solid placeholder-no-fix" type="password" autocomplete="off" placeholder="Password" name="password" /> </div>
 <div class="form-actions">
 {!! csrf_field() !!}
-<button type="submit" class="btn green uppercase btn-block">Вход</button>
+<button type="submit" class="btn green uppercase btn-block">Login</button>
 </div>
 
 
