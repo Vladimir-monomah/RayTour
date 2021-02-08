@@ -23,14 +23,14 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Heading</label>
+<label class="col-sm-3 control-label">Заголовок</label>
 <div class="col-sm-6"><input name="head" value="{{ $info->head }}" class="form-control input-lg" type="text"></div>
 </div>
 
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Text</label>
+<label class="col-sm-3 control-label">Основной текст</label>
 <div class="col-sm-6">
 <textarea class="wysihtml5 form-control" rows="15" name="txt">{{ $info->txt }}</textarea>
 </div>
@@ -39,7 +39,7 @@
 
 
             <div class="form-group">
-            <label class="col-md-3 control-label"><strong>About Text</strong></label>
+            <label class="col-md-3 control-label"><strong>Примечание</strong></label>
             <div class="col-md-6">
             <textarea name="about" rows="5" class="form-control">{{ $info->about }}</textarea>
             </div>
@@ -53,7 +53,7 @@
 
               <div class="row">
               <div class="col-md-offset-3 col-md-6">
-              <button type="submit" class="btn blue btn-block">Submit</button>
+              <button type="submit" class="btn blue btn-block">Сохранить</button>
               </div>
               </div>
 

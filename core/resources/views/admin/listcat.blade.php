@@ -27,10 +27,10 @@
 
 <button type="button" class="btn btn-success btn-sm edit_button" 
 data-toggle="modal" data-target="#myModal"
-data-act="<i class='fa fa-plus'></i>  ADD NEW"
+data-act="<i class='fa fa-plus'></i>  ДОБАВИТЬ НОВЫЕ"
 data-name=""
 data-id="0">
-<i class='fa fa-plus'></i>  ADD NEW
+<i class='fa fa-plus'></i> ДОБАВИТЬ НОВОЕ
 </button>
 
 
@@ -43,9 +43,9 @@ data-id="0">
 
                 <thead>
                 <tr>
-                    <th>ID#</th>
-                    <th>NAME</th>
-                    <th>Action</th>
+                    <th>№</th>
+                    <th>Имя</th>
+                    <th>Действие</th>
                 </tr>
                 </thead>
 
@@ -61,17 +61,17 @@ data-id="0">
 
 <button type="button" class="btn btn-primary btn-sm edit_button" 
 data-toggle="modal" data-target="#myModal"
-data-act="<i class='fa fa-edit'></i>  EDIT"
+data-act="<i class='fa fa-edit'></i>  Редактировать"
 data-name="{{ $cat->name }}"
 data-id="{{ $cat->id }}">
-<i class='fa fa-edit'></i>  EDIT
+<i class='fa fa-edit'></i>  РЕДАКТИРОВАТЬ
 </button>
 
 
 <button type="button" class="btn btn-danger btn-sm delete_button" 
 data-toggle="modal" data-target="#DelModal"
 data-id="{{ $cat->id }}">
-<i class='fa fa-times'></i> DELETE
+<i class='fa fa-times'></i> УДАЛИТЬ
 </button>
 </td>
 
@@ -96,7 +96,7 @@ data-id="{{ $cat->id }}">
 
     
                 <div class="text-center">
-                <h3>No Cats available</h3>
+                <h3>Нет доступных стран</h3>
                 </div>
     @endif
 
@@ -112,7 +112,7 @@ data-id="{{ $cat->id }}">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel"> <b class="abir_act"></b> <b> Category</b></h4>
+            <h4 class="modal-title" id="myModalLabel"> <b class="abir_act"></b> <b> Категории</b></h4>
       </div>
       <form method="post" action="">
           <div class="modal-body">
@@ -124,8 +124,8 @@ data-id="{{ $cat->id }}">
          
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
           </div>
       </form>
     </div>
@@ -149,11 +149,11 @@ data-id="{{ $cat->id }}">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel"> <i class='fa fa-trash'></i> Delete !</h4>
+            <h4 class="modal-title" id="myModalLabel"> <i class='fa fa-trash'></i> Удалить !</h4>
       </div>
 
 			<div class="modal-body">
-				<strong>Are you sure you want to Delete ?</strong>
+				<strong>Вы уверены, что хотите удалить ?</strong>
 			</div>
 
           <div class="modal-footer">
@@ -165,8 +165,8 @@ data-id="{{ $cat->id }}">
 {{ method_field('DELETE') }}
 <input type="hidden" name="id" class="abir_id" value="0">
 
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="submit" class="btn btn-danger">DELETE</button>
+<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+<button type="submit" class="btn btn-danger">Удалить</button>
 
 </form>
 

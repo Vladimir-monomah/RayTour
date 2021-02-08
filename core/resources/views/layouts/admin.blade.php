@@ -71,13 +71,13 @@
 
 
 
-<span class="username"> Welcome, {{ Auth::guard('admin')->user()->username }} </span>
+<span class="username"> Добро пожаловать, {{ Auth::guard('admin')->user()->username }} </span>
 <i class="fa fa-angle-down"></i>
 </a>
 <ul class="dropdown-menu dropdown-menu-default">
 
-<li><a href="{{url('admin/changepassword')}}"><i class="fa fa-cogs"></i> Change Password </a></li>
-<li><a href="{{url('admin/logout')}}"><i class="fa fa-sign-out"></i> Log Out </a></li>
+<li><a href="{{url('admin/changepassword')}}"><i class="fa fa-cogs"></i> Изменить пароль </a></li>
+<li><a href="{{url('admin/logout')}}"><i class="fa fa-sign-out"></i> Выйти </a></li>
 
 
 </ul>

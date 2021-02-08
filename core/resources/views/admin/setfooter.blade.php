@@ -119,7 +119,7 @@
 
 
 
-<a href="{{url('admin/editfootmenu')}}/{{ $menu->id }}" class="btn purple btn-xs"><i class="fa fa-edit"></i> EDIT</a>
+<a href="{{url('admin/editfootmenu')}}/{{ $menu->id }}" class="btn purple btn-xs"><i class="fa fa-edit"></i> Редактировать</a>
 
 
 
@@ -127,7 +127,7 @@
 {!! csrf_field() !!}
 {{ method_field('DELETE') }}
 <input type="hidden" name="id" value="{{ $menu->id }}">
-<button type="submit" class="btn btn-xs btn-danger abir"><i class="fa fa-times"></i> DELETE</button>
+<button type="submit" class="btn btn-xs btn-danger abir"><i class="fa fa-times"></i> Удалить</button>
 </form>
 
 
@@ -156,7 +156,7 @@
     @else
 
                 <div class="text-center">
-                    <h3>No Menu available Yet</h3>
+                    <h3>Меню пока недоступно</h3>
                 </div>
     @endif
        

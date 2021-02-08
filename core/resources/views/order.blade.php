@@ -14,7 +14,7 @@
 <div class="col-md-12">
 
 <div class="subheader-info">
-<h1>ORDER NOW</h1>
+<h1>ЗАКАЗАТЬ СЕЙЧАС</h1>
 </div>
 </div>
 </div>
@@ -79,7 +79,7 @@
 
 
 
-<button type="submit" class="btn thbg-color btn-block"/>Submit Order</button>
+<button type="submit" class="btn thbg-color btn-block"/>Подтвердить заказ</button>
 
 
 
@@ -98,7 +98,7 @@
 
             <div class="col-md-3">
               <div class="widget kd-userinfo-widget">
-                <div class="kd-widget-title"><h2>Contact</h2></div>
+                <div class="kd-widget-title"><h2>Связаться с нами</h2></div>
                 <ul>
                     <li><i class="fa fa-map-marker"></i> {{$General->address}}</li>
                     <li><i class="fa fa-phone-square"></i> {{$General->mobile}}</li>
@@ -106,7 +106,7 @@
                   </ul>
               </div>
               <div class="widget kd-followus-widget">
-                <div class="kd-widget-title"><h2>Follow Us</h2></div>
+                <div class="kd-widget-title"><h2>Подписывайтесь на нас</h2></div>
                 <ul>
 
 

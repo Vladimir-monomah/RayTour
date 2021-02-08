@@ -26,11 +26,11 @@
 
                 <thead>
                 <tr>
-                    <th>ID#</th>
-                    <th>NAME</th>
-                    <th>Description</th>
-                    <th>Image</th>
-                    <th>Action</th>
+                    <th>№</th>
+                    <th>Имя</th>
+                    <th>Описание</th>
+                    <th>Картинка</th>
+                    <th>Действие</th>
                 </tr>
                 </thead>
 
@@ -50,14 +50,14 @@
 
 
 
-<a href="{{url('admin/editalbum')}}/{{ $tour->id }}" class="btn purple btn-sm"><i class="fa fa-edit"></i> EDIT</a>
-<a href="{{url('admin/viewalbum')}}/{{ $tour->id }}" class="btn green btn-sm"><i class="fa fa-desktop"></i> View</a>
+<a href="{{url('admin/editalbum')}}/{{ $tour->id }}" class="btn purple btn-sm"><i class="fa fa-edit"></i> Редактировать</a>
+<a href="{{url('admin/viewalbum')}}/{{ $tour->id }}" class="btn green btn-sm"><i class="fa fa-desktop"></i> Просмотреть</a>
 
 
 <button type="button" class="btn btn-danger btn-sm delete_button" 
 data-toggle="modal" data-target="#DelModal"
 data-id="{{ $tour->id }}">
-<i class='fa fa-times'></i> DELETE
+<i class='fa fa-times'></i> Удалить
 </button>
 
 
@@ -90,7 +90,7 @@ data-id="{{ $tour->id }}">
     @else
 
                 <div class="text-center">
-                    <h3>No tour available</h3>
+                    <h3>Нет доступных туров</h3>
                 </div>
     @endif
 
@@ -105,11 +105,11 @@ data-id="{{ $tour->id }}">
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel"> <i class='fa fa-trash'></i> Delete !</h4>
+            <h4 class="modal-title" id="myModalLabel"> <i class='fa fa-trash'></i> Удалить !</h4>
       </div>
 
             <div class="modal-body">
-                <strong>Are you sure you want to Delete ?</strong>
+                <strong>Вы уверены, что хотите удалить ?</strong>
             </div>
 
           <div class="modal-footer">
@@ -122,7 +122,7 @@ data-id="{{ $tour->id }}">
 <input type="hidden" name="id" class="abir_id" value="0">
 
 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="submit" class="btn btn-danger">DELETE</button>
+<button type="submit" class="btn btn-danger">Удалить</button>
 
 </form>
 

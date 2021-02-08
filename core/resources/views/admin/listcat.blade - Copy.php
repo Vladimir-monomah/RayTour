@@ -46,13 +46,13 @@
 <td>{{ $cat->name }}</td>
 
 <td>
-<a href="{{url('admin/editcat')}}/{{ $cat->id }}" class="btn purple btn-xs"><i class="fa fa-edit"></i> EDIT</a>
+<a href="{{url('admin/editcat')}}/{{ $cat->id }}" class="btn purple btn-xs"><i class="fa fa-edit"></i> Редактировать</a>
 
 <form method="post" action="{{ url('admin/deletecat') }}" class="form-inline">
 {!! csrf_field() !!}
 {{ method_field('DELETE') }}
 <input type="hidden" name="id" value="{{ $cat->id }}">
-<button type="submit" class="btn btn-xs btn-danger abir"><i class="fa fa-times"></i> DELETE</button>
+<button type="submit" class="btn btn-xs btn-danger abir"><i class="fa fa-times"></i> Удалить</button>
 </form>
 </td>
 
@@ -77,7 +77,7 @@
 
     
                 <div class="text-center">
-                <h3>No Cats available</h3>
+                <h3>Нет доступных стран</h3>
                 </div>
     @endif
 

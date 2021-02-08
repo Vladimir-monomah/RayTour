@@ -23,12 +23,12 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">ALBUM NAME</label>
+<label class="col-sm-3 control-label">НАЗВАНИЕ АЛЬБОМА</label>
 <div class="col-sm-6"><input name="name" value="{{ $album->name }}" class="form-control input-lg" type="text"></div>
 </div>
 
 <div class="form-group">
-<label class="col-sm-3 control-label">SHORT DESCRIPTION</label>
+<label class="col-sm-3 control-label">КРАТКОЕ ОПИСАНИЕ</label>
 <div class="col-sm-6"><input name="des" value="{{ $album->des }}" class="form-control input-lg" type="text"></div>
 </div>
 
@@ -37,7 +37,7 @@
 
 <div class="form-group">
 <div class="form-group">
-<label class="col-sm-3 control-label">Main IMAGE</label>
+<label class="col-sm-3 control-label">Основное изображение</label>
 <div class="col-sm-2"><input name="mainimage" type="file" /></div>
 <div class="col-sm-4"> <img src="{{asset('frontend/images/albums/')}}/{{ $album->img }}" alt="*" style="width:200px;"></div>
 </div>
@@ -50,7 +50,7 @@
 
               <div class="row">
               <div class="col-md-offset-3 col-md-6">
-              <button type="submit" class="btn blue btn-block">Submit</button>
+              <button type="submit" class="btn blue btn-block">Сохранить</button>
               </div>
               </div>
 

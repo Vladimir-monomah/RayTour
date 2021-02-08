@@ -35,11 +35,11 @@
 
                 <thead>
                 <tr>
-                    <th>ID#</th>
-                    <th>Clinet Name</th>
-                    <th>Contact Details</th>
-                    <th>Order Status</th>
-                    <th>Action</th>
+                    <th>#</th>
+                    <th>Имя клиента</th>
+                    <th>Контактная информация</th>
+                    <th>Статус заказа</th>
+                    <th>Действие</th>
                 </tr>
                 </thead>
 
@@ -53,11 +53,11 @@
 <td>
 
   @if($ord->stat==0)
-<button type="button" class="btn btn-xs btn-primary">ACTIVE</button>
+<button type="button" class="btn btn-xs btn-primary">АКТИВНЫЙ</button>
   @elseif($ord->stat==1)
-<button type="button" class="btn btn-xs btn-success">COMPLETED</button>
+<button type="button" class="btn btn-xs btn-success">ЗАВЕРШЕНО</button>
   @elseif($ord->stat==2)
-<button type="button" class="btn btn-xs btn-danger">REJECTED</button>
+<button type="button" class="btn btn-xs btn-danger">ОТКЛОНЕН</button>
   @endif
 
 
@@ -66,7 +66,7 @@
 <td>
 
 
-<a href="{{url('admin/vieworder')}}/{{ $ord->id }}" class="btn btn-primary btn-sm" >Details/Action</a>
+<a href="{{url('admin/vieworder')}}/{{ $ord->id }}" class="btn btn-primary btn-sm" >Детали / Действие</a>
 
 </td>
 
@@ -91,7 +91,7 @@
 
     
                 <div class="text-center">
-                <h3>No Cats available</h3>
+                <h3>Нет доступных стран</h3>
                 </div>
     @endif
 
@@ -107,7 +107,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel"> <b class="abir_act"></b> <b> Category</b></h4>
+            <h4 class="modal-title" id="myModalLabel"> <b class="abir_act"></b> <b> Категории</b></h4>
       </div>
       <form method="post" action="">
           <div class="modal-body">
@@ -119,8 +119,8 @@
          
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
           </div>
       </form>
     </div>
@@ -144,11 +144,11 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title" id="myModalLabel"> <i class='fa fa-trash'></i> Delete !</h4>
+            <h4 class="modal-title" id="myModalLabel"> <i class='fa fa-trash'></i> Удалить !</h4>
       </div>
 
 			<div class="modal-body">
-				<strong>Are you sure you want to Delete ?</strong>
+				<strong>Вы уверены, что хотите удалить ?</strong>
 			</div>
 
           <div class="modal-footer">
@@ -160,8 +160,8 @@
 {{ method_field('DELETE') }}
 <input type="hidden" name="id" class="abir_id" value="0">
 
-<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-<button type="submit" class="btn btn-danger">DELETE</button>
+<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+<button type="submit" class="btn btn-danger">Удалить</button>
 
 </form>
 

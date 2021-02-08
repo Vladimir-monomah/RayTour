@@ -25,16 +25,16 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Partner Logo</label>
+<label class="col-sm-3 control-label">Логотип партнера</label>
 <div class="col-sm-3"><input type="file" name="images[]" multiple><br>
-<b style="color:red; font-weight: bold;"> MULTIPLE IMAGE CAN BE UPLOADED <br> WILL RESIZED TO 300 X 200 </b>
+<b style="color:red; font-weight: bold;"> МОЖНО ЗАГРУЗИТЬ НЕСКОЛЬКО ИЗОБРАЖЕНИЙ <br> БУДЕТ ИЗМЕНЕН РАЗМЕР ДО 300 X 200 </b>
 </div>
 </div>
 
 
 <div class="row">
 <div class="col-md-offset-3 col-md-3">
-<button type="submit" class="btn blue btn-block">Submit</button>
+<button type="submit" class="btn blue btn-block">Сохранить</button>
 </div>
 </div>
 
@@ -64,7 +64,7 @@
 {!! csrf_field() !!}
 {{ method_field('DELETE') }}
 <input type="hidden" name="id" value="{{ $mimg->id }}">
-<button type="submit" class="btn btn-block btn-danger"><i class="fa fa-times"></i> DELETE</button>
+<button type="submit" class="btn btn-block btn-danger"><i class="fa fa-times"></i> УДАЛИТЬ</button>
 </form>
 <br><br><br>
 
@@ -76,7 +76,7 @@
     @else
 
                 <div class="text-center">
-                <h3>No Images Added Yet</h3>
+                <h3>Изображения еще не добавлены</h3>
                 </div>
     @endif
 

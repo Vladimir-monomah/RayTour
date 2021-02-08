@@ -25,26 +25,26 @@
 
 
     <div class="form-group">
-    <label class="col-sm-3 control-label"><strong>SLIDER IMAGE</strong></label>
+    <label class="col-sm-3 control-label"><strong>СЛАЙДЕР</strong></label>
     <div class="col-sm-3"><input type="file" name="image"></div>
-    <div class="col-sm-3"><b style="color:red; font-weight: bold;"> Will Resized To 1200 X 600</b></div>
+    <div class="col-sm-3"><b style="color:red; font-weight: bold;"> Будет изменен размер до 1200 X 600</b></div>
     </div>
 
 
     <div class="form-group">
-    <label class="col-sm-3 control-label"><strong>Bold Text</strong></strong></label>
+    <label class="col-sm-3 control-label"><strong>Жирный текст</strong></strong></label>
     <div class="col-sm-6"><input type="text" name="boldtxt" class="form-control input-lg"></div>         
     </div>
 
     <div class="form-group">
-    <label class="col-sm-3 control-label"><strong>Small Text</strong></strong></label>
+    <label class="col-sm-3 control-label"><strong>Мелкий текст</strong></strong></label>
     <div class="col-sm-6"><input type="text" name="smalltxt" class="form-control input-lg"></div>
     </div>
 
 
     <div class="row">
     <div class="col-md-offset-3 col-md-6">
-    <button type="submit" class="btn blue btn-block">ADD NEW</button>
+    <button type="submit" class="btn blue btn-block">ДОБАВИТЬ НОВОЕ</button>
     </div>
     </div>
 
@@ -81,7 +81,7 @@
 {!! csrf_field() !!}
 {{ method_field('DELETE') }}
 <input type="hidden" name="id" value="{{ $mimg->id }}">
-<button type="submit" class="btn btn-block btn-danger"><i class="fa fa-times"></i> DELETE</button>
+<button type="submit" class="btn btn-block btn-danger"><i class="fa fa-times"></i> УДАЛИТЬ</button>
 </form>
 <br><br><br>
 
@@ -93,7 +93,7 @@
     @else
 
                 <div class="text-center">
-                <h3>No Slider Added Yet</h3>
+                <h3>Слайдер еще не добавлен</h3>
                 </div>
     @endif
 

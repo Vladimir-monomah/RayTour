@@ -23,13 +23,13 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">TOUR NAME</label>
+<label class="col-sm-3 control-label">НАЗВАНИЕ ТУРА</label>
 <div class="col-sm-6"><input name="name" value="" class="form-control input-lg" type="text"></div>
 </div>
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">TOUR COST</label>
+<label class="col-sm-3 control-label">СТОИМОСТЬ ТУРА</label>
 <div class="col-sm-6">                
 <div class="input-group mb15">
 <input class="form-control input-lg" name="rate" type="text">
@@ -43,11 +43,11 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Duration</label>
+<label class="col-sm-3 control-label">Продолжительность</label>
 <div class="col-sm-6">                
 <div class="input-group mb15">
 <input class="form-control input-lg" name="dur" type="text">
-<span class="input-group-addon">DAYS</span>
+<span class="input-group-addon">Дней</span>
 </div>
 </div>
 </div>
@@ -55,7 +55,7 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Locations</label>
+<label class="col-sm-3 control-label">Расположение</label>
 <div class="col-sm-6"><input name="loc" value="" class="form-control input-lg" type="text"></div>
 </div>
 
@@ -69,7 +69,7 @@
           
 
 <div class="form-group">
-<label class="col-sm-3 control-label">CATEGORY</label>
+<label class="col-sm-3 control-label">Категории</label>
 <div class="col-sm-6">
 <select id="cat" name="cat" class="form-control input-lg">
 
@@ -87,9 +87,9 @@
 
 <div class="form-group">
 <div class="form-group">
-<label class="col-sm-3 control-label">Main IMAGE</label>
+<label class="col-sm-3 control-label">Основное изображение</label>
 <div class="col-sm-2"><input name="mainimage" type="file" /></div>
-<div class="col-sm-4"><b style="color:red; font-weight: bold;"> ONE IMAGE ONLY </b></div>
+<div class="col-sm-4"><b style="color:red; font-weight: bold;margin-left: 45px;"> ТОЛЬКО ОДНО ИЗОБРАЖЕНИЕ </b></div>
 </div>
 
 <br><br>
@@ -100,7 +100,7 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Tour Description</label>
+<label class="col-sm-3 control-label">Описание тура</label>
 <div class="col-sm-6">
 <textarea id="" placeholder="" class="wysihtml5 form-control" rows="10" name="description"></textarea>
 </div>
@@ -109,7 +109,7 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Package Includes</label>
+<label class="col-sm-3 control-label">Пакет включает в себя</label>
 <div class="col-sm-6">
 <textarea id="" placeholder="" class="wysihtml5 form-control" rows="5" name="inc"></textarea>
 </div>
@@ -117,7 +117,7 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Package Excludes</label>
+<label class="col-sm-3 control-label">Пакет не включает</label>
 <div class="col-sm-6">
 <textarea id="" placeholder="" class="wysihtml5 form-control" rows="5" name="exc"></textarea>
 </div>
@@ -129,7 +129,7 @@
 
               <div class="row">
               <div class="col-md-offset-3 col-md-6">
-              <button type="submit" class="btn blue btn-block">Submit</button>
+              <button type="submit" class="btn blue btn-block">Сохранить</button>
               </div>
               </div>
 
