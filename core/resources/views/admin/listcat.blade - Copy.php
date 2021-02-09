@@ -77,7 +77,7 @@
 
     
                 <div class="text-center">
-                <h3>Нет доступных стран</h3>
+                <h3>Пусто</h3>
                 </div>
     @endif
 
