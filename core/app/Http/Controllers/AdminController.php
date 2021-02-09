@@ -54,7 +54,7 @@ class AdminController extends Controller
     public function changepassform(){
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Change Password';
+        $data['page_title'] = 'Изменить пароль';
         return view('admin.changepass', $data);
 
    }

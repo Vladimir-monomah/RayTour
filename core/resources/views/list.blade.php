@@ -95,7 +95,7 @@
     @else
 
                 <div class="text-center" style="min-height:100px;">
-                    <h3>No Property Found</h3>
+                    <h3>Туры не найдены</h3>
                 </div>
     @endif
 
