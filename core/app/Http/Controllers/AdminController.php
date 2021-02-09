@@ -294,7 +294,7 @@ if ($exist === null) {
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Tour List';
+        $data['page_title'] = 'Список туров';
         $data['TourList'] = Tour::orderBy('id', 'ASC')->paginate(1000);
         return view('admin.listtour', $data);
 

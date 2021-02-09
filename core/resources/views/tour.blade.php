@@ -44,11 +44,11 @@
 <div class="col-md-4">
 <div class="kd-pkg-info">
 <ul>
-<li><i class="fa fa-map-marker"></i> <strong>Duration:</strong> {{$tour->dur}} Days</li>
-<li><i class="fa fa-paper-plane"></i> <strong>Location:</strong> {{$tour->loc}}</li>
-<li><i class="fa fa-tag"></i> <strong>Price:</strong> {{$tour->rate}} {{$General->currency}} </li>
+<li><i class="fa fa-map-marker"></i> <strong>Продолжительность:</strong> {{$tour->dur}} Days</li>
+<li><i class="fa fa-paper-plane"></i> <strong>Расположение:</strong> {{$tour->loc}}</li>
+<li><i class="fa fa-tag"></i> <strong>Цена:</strong> {{$tour->rate}} {{$General->currency}} </li>
 </ul>
-<a href="{{url('order')}}/{{$tour->id}}" class="kd-booking-btn thbg-color">Order Now</a>
+<a href="{{url('order')}}/{{$tour->id}}" class="kd-booking-btn thbg-color">Заказать сейчас</a>
 </div>
 </div>
 
@@ -59,18 +59,18 @@
 
 <div class="kd-rich-editor">
 
-<h1>Tour Description</h1><br>
+<h1>Описание тура</h1><br>
 
 {!! $tour->description !!}
 
 
 
 
-<br><br><h1>Package Includes</h1><br>
+<br><br><h1>Пакет включает в себя</h1><br>
 {!! $tour->inc !!}
 
 
-<br><br><h1>Package Excludes</h1><br>
+<br><br><h1>Пакет не включает</h1><br>
 {!! $tour->exc !!}
 <br><br><br><br>
 </div>

@@ -32,9 +32,9 @@
 
                 <thead>
                 <tr>
-                    <th>ID#</th>
-                    <th>NAME</th>
-                    <th>Action</th>
+                    <th>№</th>
+                    <th>Имя</th>
+                    <th>Действие</th>
                 </tr>
                 </thead>
 

@@ -27,7 +27,7 @@
 
 
 <li>
-		<i class="fa fa-phone"></i> Phone: {{$General->mobile}}
+		<i class="fa fa-phone"></i> Телефон: {{$General->mobile}}
 </li>
 
 <li>
@@ -96,7 +96,7 @@
 
 @endforeach
 
-<li><a href="{{url('contact/')}}">Contact US</a></li>
+<li><a href="{{url('contact/')}}">Свяжитесь с нами</a></li>
 
 
 </ul>
@@ -139,7 +139,7 @@
 <div class="row">
     
 <div class="widget col-md-6 kd-textwidget">
-<div class="kd-widget-title"><h2>About {{$General->sitename}} </h2></div>
+<div class="kd-widget-title"><h2>О {{$General->sitename}} </h2></div>
 <div class="kd-contactinfo">
 <p>
 
@@ -150,7 +150,7 @@
 </div>
 
 <div class="widget col-md-3 kd-followus-widget">
-<div class="kd-widget-title"><h2>Follow Us</h2></div>
+<div class="kd-widget-title"><h2>Подписывайтесь на нас</h2></div>
 <ul>
 
 
@@ -183,7 +183,7 @@
 </div>
 
           <div class="widget col-md-3 kd-userinfo-widget">
-            <div class="kd-widget-title"><h2>Contact</h2></div>
+            <div class="kd-widget-title"><h2>Связаться с нами</h2></div>
             <ul>
                 <li><i class="fa fa-map-marker"></i> {{$General->address}}</li>
                 <li><i class="fa fa-phone-square"></i> {{$General->mobile}}</li>
@@ -191,7 +191,7 @@
               </ul>
           </div>
 
-           <center><div class="col-md-6"><p>© Copyright 2016  All Rights Reserved by {{$General->sitename}} </p></div><center>
+           <center><div class="col-md-6"><p>© Copyright 2021  All Rights Reserved by {{$General->sitename}} </p></div><center>
 
         </div>
       </div>

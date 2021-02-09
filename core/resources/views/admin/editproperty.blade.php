@@ -48,7 +48,7 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">NAME</label>
+<label class="col-sm-3 control-label">Имя</label>
 <div class="col-sm-6"><input name="name" value="{{ $pro->name }}" class="form-control input-lg" type="text"></div>
 </div>
 
@@ -57,7 +57,7 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">PRICE</label>
+<label class="col-sm-3 control-label">Цена</label>
 
 <div class="col-sm-6">                
 
@@ -84,7 +84,7 @@
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">CATEGORY</label>
+<label class="col-sm-3 control-label">Категория</label>
 <div class="col-sm-6">
 
 Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->property->name }} </b>
@@ -105,7 +105,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">SUB CATEGORY</label>
+<label class="col-sm-3 control-label">ПОДКАТЕГОРИЯ</label>
 <div class="col-sm-6">
 
 <select id="subcat" name="subcat" class="form-control input-lg">
@@ -131,7 +131,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 <br><br>
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Main IMAGE</label>
+<label class="col-sm-3 control-label">Основное изображение</label>
 <div class="col-sm-2"><input name="mainimage" type="file" /></div>
 <div class="col-sm-4"><img src="{{asset('propertyimg/')}}/{{ $pro->img }}" alt="*" style="width:100px;"></div>
 </div>
@@ -139,7 +139,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 <br><br>
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Overview</label>
+<label class="col-sm-3 control-label">Обзор</label>
 <div class="col-sm-6">
 <textarea id="" placeholder="" class="wysihtml5 form-control" rows="10" name="overview">{{ $pro->quick }}</textarea>
 </div>
@@ -149,7 +149,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Public Facilities</label>
+<label class="col-sm-3 control-label">Государственные учреждения</label>
 <div class="col-sm-6">
 <textarea id="" placeholder="" class="wysihtml5 form-control" rows="10" name="public">{{ $pro->public }}</textarea>
 </div>
@@ -159,7 +159,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Property Address</label>
+<label class="col-sm-3 control-label">Адрес собственности</label>
 <div class="col-sm-6"><input name="address" value="{{ $pro->address }}" class="form-control input-lg" type="text"></div>
 </div>
 
@@ -167,7 +167,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label">Facing</label>
+<label class="col-sm-3 control-label">Облицовка</label>
 <div class="col-sm-6"><input name="facing" value="{{ $pro->facing }}" class="form-control input-lg" type="text"></div>
 </div>
 
@@ -175,7 +175,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label"> Number of Room </label>
+<label class="col-sm-3 control-label"> Количество комнат </label>
 <div class="col-sm-6"><input name="room" value="{{ $pro->room }}" class="form-control input-lg" type="text"></div>
 </div>
 
@@ -183,7 +183,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label"> Number of Bathroom </label>
+<label class="col-sm-3 control-label"> Количество Санузлов </label>
 <div class="col-sm-6"><input name="broom" value="{{ $pro->broom }}" class="form-control input-lg" type="text"></div>
 </div>
 
@@ -191,7 +191,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 
 
 <div class="form-group">
-<label class="col-sm-3 control-label"> Total Area </label>
+<label class="col-sm-3 control-label"> Общая площадь </label>
 <div class="col-sm-6"><input name="area" value="{{ $pro->area }}" class="form-control input-lg" type="text"></div>
 </div>
 
@@ -203,7 +203,7 @@ Currently Selected As <b> {{ $pro->property->category->name }} &rarr; {{ $pro->p
 
               <div class="row">
               <div class="col-md-offset-3 col-md-6">
-              <button type="submit" class="btn blue btn-block">Submit</button>
+              <button type="submit" class="btn blue btn-block">Сохранить</button>
               </div>
               </div>
 

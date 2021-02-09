@@ -47,7 +47,7 @@
 
             <div class="col-md-9">
               <div class="kd-rich-editor">
-                <h2>Get in Touch With us!</h2>
+                <h2>Свяжись с нами!</h2>
               </div>
 
 
@@ -63,13 +63,13 @@
 {!! csrf_field() !!}
 
 
-                  <p><input type="text" name="name" placeholder="Name *" /></p>
-                  <p><input type="text" name="phone" placeholder="Phone *" /></p>
+                  <p><input type="text" name="name" placeholder="Имя *" /></p>
+                  <p><input type="text" name="phone" placeholder="Телефон *" /></p>
                   <p><input type="text" name="email" placeholder="Email *" / ></p>
-                  <p><input type="text" name="website" placeholder="Website *" / ></p>
-                  <p class="kd-textarea"><textarea name="message" placeholder="add your comment"></textarea></p>
+                  <p><input type="text" name="website" placeholder="Сайт *" / ></p>
+                  <p class="kd-textarea"><textarea name="message" placeholder="добавить комментарий"></textarea></p>
           <p class="clearfix"></p>
-                  <p class="kd-button"><input type="submit" class="thbg-color" value="Send" /></p>
+                  <p class="kd-button"><input type="submit" class="thbg-color" value="Отправить" /></p>
                 </form>
             </div>
             </div>
@@ -80,7 +80,7 @@
 
             <div class="col-md-3">
               <div class="widget kd-userinfo-widget">
-                <div class="kd-widget-title"><h2>Contact</h2></div>
+                <div class="kd-widget-title"><h2>Контакты</h2></div>
                 <ul>
                     <li><i class="fa fa-map-marker"></i> {{$General->address}}</li>
                     <li><i class="fa fa-phone-square"></i> {{$General->mobile}}</li>
@@ -88,7 +88,7 @@
                   </ul>
               </div>
               <div class="widget kd-followus-widget">
-                <div class="kd-widget-title"><h2>Follow Us</h2></div>
+                <div class="kd-widget-title"><h2>Подписывайтесь на нас</h2></div>
                 <ul>
 
 

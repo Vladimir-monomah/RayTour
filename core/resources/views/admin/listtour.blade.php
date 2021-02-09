@@ -26,11 +26,11 @@
 
                 <thead>
                 <tr>
-                    <th>ID#</th>
-                    <th>NAME</th>
-                    <th>Category</th>
-                    <th>Featured</th>
-                    <th>Action</th>
+                    <th>№</th>
+                    <th>Имя</th>
+                    <th>Категория</th>
+                    <th>Рекомендуемые</th>
+                    <th>Действие</th>
                 </tr>
                 </thead>
 
@@ -48,9 +48,9 @@
 <input type="hidden" name="id" value="{{ $tour->id }}">
 
   @if($tour->featured)
-<button type="submit" class="btn btn-xs btn-danger"><i class="fa fa-times"></i> REMOVE</button>
+<button type="submit" class="btn btn-xs btn-danger"><i class="fa fa-times"></i> УДАЛЯТЬ</button>
   @else
-<button type="submit" class="btn btn-xs btn-success"><i class="fa fa-plus"></i> ADD</button>
+<button type="submit" class="btn btn-xs btn-success"><i class="fa fa-plus"></i> ДОБАВИТЬ</button>
   @endif
 
 </form>

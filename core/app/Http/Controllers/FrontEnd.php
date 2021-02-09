@@ -37,7 +37,7 @@ class FrontEnd extends Controller
     public function __construct(){
         $name = GeneralSetting::first();
         $this->site_title = $name->sitename;
-        $this->page_title = 'Login';
+        $this->page_title = 'Логин';
         $this->catlist = Cats::orderBy('id', 'ASC')->get();
         $this->General = $name;
         $this->Social = Social::first();
@@ -117,7 +117,7 @@ $sent = Mail::send('email', $data, function($message)
     $message->to($this->General->email, '')->subject('Message From'.$this->General->sitename);
 });
 
-                Session::flash('message','Message Sent Successfully');        
+                Session::flash('Сообщение','Сообщение успешно отправлено');        
                 Session::flash('type', 'success');  
                 
             return redirect()->back();
@@ -131,7 +131,7 @@ $sent = Mail::send('email', $data, function($message)
 
         $data = [];
         $data['site_title'] = $this->site_title;
-        $data['page_title'] = 'Order Now';
+        $data['page_title'] = 'Заказать сейчас';
 
         $data['catlist'] = $this->catlist;
         $data['General'] = $this->General;
@@ -155,7 +155,7 @@ $sent = Mail::send('email', $data, function($message)
 
             if ($validator->fails()) {
 
-            Session::flash('message','All Fields Are Required');        
+            Session::flash('Сообщение','Все поля обязательны для заполнения');        
             Session::flash('type', 'danger');  
             return redirect()->back();
 
@@ -179,12 +179,12 @@ $sent = Mail::send('email', $data, function($message)
 
         try {
             Orders::create($data);
-            session::flash('message', 'Added Successfully.');
+            session::flash('Сообщение', 'Добавлено успешно.');
             Session::flash('type', 'success');
             return redirect()->back();
 
         } catch (\PDOException $e) {
-            session::flash('message', ' Some Problem Occure, Please Try Again!');
+            session::flash('Сообщение', ' Возникла проблема, попробуйте еще раз!');
             Session::flash('type', 'danger');
             return redirect()->back();
         }

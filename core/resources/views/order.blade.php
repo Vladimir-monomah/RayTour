@@ -47,7 +47,7 @@
 
             <div class="col-md-9">
               <div class="kd-rich-editor">
-                <h2>Get in Touch With us!</h2>
+                <h2>Свяжись с нами!</h2>
               </div>
 
 
@@ -63,17 +63,17 @@
 {!! csrf_field() !!}
 
 <div class="col-md-6">
-<input type="text" placeholder="Full Name" class="form-control input-lg" required="" name="name"><br><br>
+<input type="text" placeholder="ФИО" class="form-control input-lg" required="" name="name"><br><br>
 </div><div class="col-md-6">
-<input type="text" placeholder="Address" class="form-control input-lg" required="" name="address"><br><br>
+<input type="text" placeholder="Адрес" class="form-control input-lg" required="" name="address"><br><br>
 </div><div class="col-md-6">
-<input type="text" placeholder="Mobile Number" class="form-control input-lg"  required="" name="mobile"><br><br>
+<input type="text" placeholder="Телефон" class="form-control input-lg"  required="" name="mobile"><br><br>
 </div><div class="col-md-6">
-<input type="email" placeholder="Email Address" class="form-control input-lg" id="" required="" name="email"><br><br>
+<input type="email" placeholder="Email" class="form-control input-lg" id="" required="" name="email"><br><br>
 </div><div class="col-md-6">
-<input type="text" placeholder="Date Of Journey" class="form-control input-lg" id="datepicker" required="" name="date"><br><br>
+<input type="text" placeholder="Дата поездки" class="form-control input-lg" id="datepicker" required="" name="date"><br><br>
 </div><div class="col-md-6">
-<input type="text" placeholder="Number Of People" class="form-control input-lg" required="" name="numppl"><br><br>
+<input type="text" placeholder="Число людей" class="form-control input-lg" required="" name="numppl"><br><br>
 </div><br><br>
 
 
