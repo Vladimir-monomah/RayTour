@@ -14,7 +14,9 @@
 <link href="{{asset('frontend/css/responsive.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/themetypo.css')}}" rel="stylesheet">
 <link href="{{asset('frontend/css/bxslider.css')}}" rel="stylesheet">
-<link href="{{asset('frontend/css/datepicker.css')}}" rel="stylesheet"></head><body>
+<link href="{{asset('frontend/css/datepicker.css')}}" rel="stylesheet">
+@yield('head')
+</head><body>
 
 <header id="mainheader">
 <!--// Top Baar //-->
@@ -84,7 +86,7 @@
 
 <div class="collapse navbar-collapse" id="navbar-collapse-1">
 <ul class="nav navbar-nav">
-<li><a href="{{url('/')}}">Home</a></li>
+<li><a href="{{url('/')}}">Главная</a></li>
 
 @foreach($catlist as $cat)
 
@@ -98,6 +100,11 @@
 
 <li><a href="{{url('contact/')}}">Свяжитесь с нами</a></li>
 
+@if(isset($user))
+<li><a href="{{url('profile/')}}">Профиль {{$user->name}}</a></li>
+@else
+<li><a href="{{url('registration/')}}">Регистрация</a></li>
+@endif
 
 </ul>
 </div>

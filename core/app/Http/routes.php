@@ -15,6 +15,19 @@
 Route::get('/','FrontEnd@home');
 Route::get('/Tour/{id}/{name}','FrontEnd@Tourview');
 Route::get('/category/{id}/{name}','FrontEnd@category');
+Route::get('/registration','FrontEnd@registration');
+Route::post('/registration','UserController@registration');
+Route::post('/signUp','UserController@signUp');
+Route::get('/profile','UserController@userOrders')->middleware('auth');
+
+Route::get('/edit-profile','UserController@editProfileView')->middleware('auth');
+Route::post('/edit-profile','UserController@editProfile')->middleware('auth');
+
+Route::get('/change-password','UserController@changePasswordView')->middleware('auth');
+Route::post('/change-password','UserController@changePassword')->middleware('auth');
+
+Route::get('/logout','UserController@logout')->middleware('auth');
+
 
 
 Route::get('/contact','FrontEnd@contact');

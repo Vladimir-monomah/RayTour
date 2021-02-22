@@ -15,6 +15,7 @@ use Mail;
 
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Cookie;
 
 // use App\User;
 // use App\AdminModel;
@@ -28,6 +29,7 @@ use App\Social;
 use App\Album;
 use App\Albumimgs;
 use App\Orders;
+use App\User;
 
 class FrontEnd extends Controller
 {
@@ -47,12 +49,8 @@ class FrontEnd extends Controller
 
     public function home(){
         $data = [];
-        $data['site_title'] = $this->site_title;
+        $this->initData($data);
         $data['page_title'] = 'HOME';
-
-        $data['catlist'] = $this->catlist;
-        $data['General'] = $this->General;
-        $data['Social'] = $this->Social;
 
         $data['Sliders'] = Slider::orderBy('id', 'ASC')->get();
         $data['featured'] = Tour::where('featured', '=', '1')->get();
@@ -71,12 +69,8 @@ class FrontEnd extends Controller
     public function contact(){
 
         $data = [];
-        $data['site_title'] = $this->site_title;
+        $this->initData($data);
         $data['page_title'] = 'Contact';
-
-        $data['catlist'] = $this->catlist;
-        $data['General'] = $this->General;
-        $data['Social'] = $this->Social;
 
         return view('contact', $data);
 
@@ -130,12 +124,8 @@ $sent = Mail::send('email', $data, function($message)
     public function order($id){
 
         $data = [];
-        $data['site_title'] = $this->site_title;
+        $this->initData($data);
         $data['page_title'] = 'Заказать сейчас';
-
-        $data['catlist'] = $this->catlist;
-        $data['General'] = $this->General;
-        $data['Social'] = $this->Social;
 
         return view('order', $data);
 
@@ -199,14 +189,9 @@ $sent = Mail::send('email', $data, function($message)
 
         $pp = Tour::findOrFail($id);
 
-
         $data = [];
-        $data['site_title'] = $this->site_title;
+        $this->initData($data);
         $data['page_title'] = $pp->name;
-
-        $data['catlist'] = $this->catlist;
-        $data['General'] = $this->General;
-        $data['Social'] = $this->Social;
 
         $data['tour'] = $pp;
        
@@ -221,15 +206,9 @@ $sent = Mail::send('email', $data, function($message)
 
         $pp = Cats::findOrFail($id);
 
-
-
         $data = [];
-        $data['site_title'] = $this->site_title;
+        $this->initData($data);
         $data['page_title'] = $pp->name;
-
-        $data['catlist'] = $this->catlist;
-        $data['General'] = $this->General;
-        $data['Social'] = $this->Social;
 
         $data['allproperty'] = $pp->tours()->paginate(9);  
 
@@ -246,12 +225,8 @@ $sent = Mail::send('email', $data, function($message)
 
 
         $data = [];
-        $data['site_title'] = $this->site_title;
+        $this->initData($data);
         $data['page_title'] = $pp->name;
-
-        $data['catlist'] = $this->catlist;
-        $data['General'] = $this->General;
-        $data['Social'] = $this->Social;
 
         $data['album'] = $pp;  
 
@@ -262,11 +237,23 @@ $sent = Mail::send('email', $data, function($message)
    }
 
 
+   public function registration(){
 
+        $data = [];
+        $this->initData($data);
+        $data['page_title'] = 'Register';
 
+        return view('registration', $data);
+    }
 
+    private function initData(&$data){
+        $data['site_title'] = $this->site_title;
 
-
+        $data['catlist'] = $this->catlist;
+        $data['General'] = $this->General;
+        $data['Social'] = $this->Social;
+        $data['user'] = Auth::user();
+    }
 
 
 }
