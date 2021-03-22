@@ -1467,6 +1467,9 @@
 					locopts = opts_from_locale(xopts.language),
 					// Options priority: js args, data-attrs, locales, defaults
 					opts = $.extend({}, defaults, locopts, elopts, options);
+				if($this.hasClass('.min-now')) {
+					opts.startDate = new Date();
+				}
 				if ($this.hasClass('input-daterange') || opts.inputs){
 					var ropts = {
 						inputs: opts.inputs || $this.find('input').toArray()

@@ -71,7 +71,7 @@
 </div><div class="col-md-6">
 <input type="email" placeholder="Email" class="form-control input-lg" id="" required="" name="email"><br><br>
 </div><div class="col-md-6">
-<input type="text" placeholder="Дата поездки" class="form-control input-lg" id="datepicker" required="" name="date"><br><br>
+<input type="text" placeholder="Дата поездки" class="form-control input-lg min-now" id="datepicker" required="" name="date"><br><br>
 </div><div class="col-md-6">
 <input type="text" placeholder="Число людей" class="form-control input-lg" required="" name="numppl"><br><br>
 </div><br><br>
