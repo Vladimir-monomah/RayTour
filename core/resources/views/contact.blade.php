@@ -64,7 +64,7 @@
 
 
                   <p><input type="text" name="name" placeholder="Имя *" /></p>
-                  <p><input type="text" name="phone" placeholder="Телефон *" /></p>
+                  <p><input type="text" name="phone" placeholder="Телефон *" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"/></p>
                   <p><input type="text" name="email" placeholder="Email *" / ></p>
                   <p><input type="text" name="website" placeholder="Сайт *" / ></p>
                   <p class="kd-textarea"><textarea name="message" placeholder="добавить комментарий"></textarea></p>

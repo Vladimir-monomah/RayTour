@@ -66,7 +66,7 @@
 			<div class="err" id="email_err"></div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6">
-		<input type="tel" placeholder="Телефон"   required="required" class="user-login__input user-login__input--tel" name="phone" id="pho_no">
+		<input type="tel" placeholder="Телефон"   required="required" class="user-login__input user-login__input--tel" name="phone" id="pho_no" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
 		<div class="err" id="pho_no_err"></div>
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6">
