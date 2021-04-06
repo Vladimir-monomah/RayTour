@@ -67,13 +67,13 @@
 </div><div class="col-md-6">
 <input type="text" placeholder="Адрес" class="form-control input-lg" required="" name="address"><br><br>
 </div><div class="col-md-6">
-<input type="text" placeholder="Телефон" class="form-control input-lg"  required="" name="mobile"><br><br>
+<input type="text" placeholder="Телефон" class="form-control input-lg"  required="" name="mobile" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br><br>
 </div><div class="col-md-6">
 <input type="email" placeholder="Email" class="form-control input-lg" id="" required="" name="email"><br><br>
 </div><div class="col-md-6">
 <input type="text" placeholder="Дата поездки" class="form-control input-lg min-now" id="datepicker" required="" name="date"><br><br>
 </div><div class="col-md-6">
-<input type="text" placeholder="Число людей" class="form-control input-lg" required="" name="numppl"><br><br>
+<input type="text" placeholder="Число людей" class="form-control input-lg" required="" name="numppl" onkeyup="this.value = this.value.replace(/[^\d]/g,'');"><br><br>
 </div><br><br>
 
 
