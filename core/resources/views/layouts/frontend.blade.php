@@ -98,7 +98,7 @@
 
 @endforeach
 
-<li><a href="{{url('contact/')}}">Свяжитесь с нами</a></li>
+<!--<li><a href="{{url('contact/')}}">Свяжитесь с нами</a></li>-->
 
 @if(isset($user))
 <li><a href="{{url('profile/')}}">Профиль {{$user->name}}</a></li>
