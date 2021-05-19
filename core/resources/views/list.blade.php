@@ -37,6 +37,23 @@
         <div class="container">
           <div class="row">
 
+<!--// Tour Filter //-->
+<form action="" method="post" class="comments-form" id="">
+{!! csrf_field() !!}
+<input type="text" placeholder="Название тура" class="form-control input-lg" name="tour_name"
+  style="display: inline; width: 250px;">
+<input type="number" placeholder="от" class="form-control input-lg" name="min_price" min="1" max="9999999" maxlength="7"
+  style="display: inline; width: 150px;">
+<input type="number" placeholder="до" class="form-control input-lg" name="max_price" min="1" max="9999999" maxlength="7"
+  style="display: inline; width: 150px;">
+  <input type="number" placeholder="дни" class="form-control input-lg" name="days" min="1" max="15" maxlength="2"
+  style="display: inline; width: 150px;">
+
+<button type="submit" class="btn thbg-color btn-block" style="display: inline; width: 150px;">Поиск</button>
+</form>
+<br><br>
+<!--// Tour Filter //-->
+
             <div class="col-md-12">
               <div class="kd-package-list">
                 <div class="row">

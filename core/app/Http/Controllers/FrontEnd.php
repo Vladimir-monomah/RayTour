@@ -62,6 +62,40 @@ class FrontEnd extends Controller
 
    }
 
+    public function tourFilter(){
+        $data = [];
+        $this->initData($data);
+        $data['page_title'] = 'HOME';
+
+        $tour_name=Input::get('tour_name');
+        $min_price=Input::get('min_price');
+        $max_price=Input::get('max_price');
+        $days=Input::get('days');
+        // die("'$tour_name'-'$min_price'-'$max_price'-'$days'");
+        
+        $tours_query = Tour::where('featured', '=', '1');
+        if($tour_name <> ''){
+            $tours_query = $tours_query->where('name', 'like', "%$tour_name%");
+        }
+        if($min_price <> ''){
+            $tours_query = $tours_query->where('rate', '>=', $min_price);
+        }
+        if($max_price <> ''){
+            $tours_query = $tours_query->where('rate', '<=', $max_price);
+        }
+        if($days <> ''){
+            $tours_query = $tours_query->where('dur', '=', $days);
+        }
+        
+        $data['Sliders'] = Slider::orderBy('id', 'ASC')->get();
+        $data['featured'] = $tours_query->get();
+        $data['Album'] = Album::get();
+        $data['partner'] = Partner::get();
+
+
+        return view('index', $data);
+
+    }
 
 
 
@@ -122,6 +156,14 @@ $sent = Mail::send('email', $data, function($message)
 
 
     public function order($id){
+
+        try{
+        $user = User::findOrFail(Auth::user()->id);
+        }
+        catch (\Exception $e) {
+            return redirect('/registration')
+                ->withErrors(array("Для заказа тура необходимо зарегистрироваться"));
+        }
 
         $data = [];
         $this->initData($data);
@@ -214,9 +256,40 @@ $sent = Mail::send('email', $data, function($message)
 
         return view('list', $data);
 
-   }
+    }
 
+    public function categoryFilter($id){
 
+        $pp = Cats::findOrFail($id);
+
+        $data = [];
+        $this->initData($data);
+        $data['page_title'] = $pp->name;
+
+        $tour_name=Input::get('tour_name');
+        $min_price=Input::get('min_price');
+        $max_price=Input::get('max_price');
+        $days=Input::get('days');
+        // die("'$tour_name'-'$min_price'-'$max_price'-'$days'");
+        
+        $tours_query = Tour::where('parent', '=', $id);
+        if($tour_name <> ''){
+            $tours_query = $tours_query->where('name', 'like', "%$tour_name%");
+        }
+        if($min_price <> ''){
+            $tours_query = $tours_query->where('rate', '>=', $min_price);
+        }
+        if($max_price <> ''){
+            $tours_query = $tours_query->where('rate', '<=', $max_price);
+        }
+        if($days <> ''){
+            $tours_query = $tours_query->where('dur', '=', $days);
+        }
+        
+        $data['allproperty'] = $tours_query->paginate(9);  
+
+        return view('list', $data);
+    }
 
     public function albumview($id){
 

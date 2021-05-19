@@ -14,7 +14,9 @@
 
 Route::get('/','FrontEnd@home');
 Route::get('/Tour/{id}/{name}','FrontEnd@Tourview');
+Route::post('/tourFilter','FrontEnd@tourFilter');
 Route::get('/category/{id}/{name}','FrontEnd@category');
+Route::post('/category/{id}/{name}','FrontEnd@categoryFilter');
 Route::get('/registration','FrontEnd@registration');
 Route::post('/registration','UserController@registration');
 Route::post('/signUp','UserController@signUp');
